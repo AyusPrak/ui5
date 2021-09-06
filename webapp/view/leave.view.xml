@@ -1,0 +1,57 @@
+<mvc:View xmlns:charts="sap.ca.ui.charts"
+    controllerName="leavem.controller.leave"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <Table items="{/students}">
+                     <headerToolbar>
+                     <Toolbar >
+                     <ToolbarSpacer ></ToolbarSpacer>
+                     <Button icon="sap-icon://add" text="Request Leave" press="handleRequestLeave" class="sapUiSmallMarginEnd"></Button>
+                     </Toolbar>
+                     </headerToolbar>
+                     <columns>
+                        <Column>
+                        <Text text="Name"/>
+                        </Column>
+                        <Column >
+                        <Text text="Gender"/>
+                        </Column>
+                        <Column >
+                        <Text text="Date of birth"/>
+                        </Column>
+                        <Column hAlign="Center" >
+                        <Text text="Email Id"/>
+                        </Column>
+                        <Column hAlign="Right">
+                        <Text text="Leave from"/>
+                        </Column>
+                        <Column hAlign="Right">
+                        <Text text="Leave to"/>
+                        </Column>
+                     </columns>
+                     <items>
+                        <ColumnListItem >
+                           <cells>
+                               <ObjectIdentifier title="{firstName}" />
+                               <Text text="{genderText}"/>
+                               <Text text="{dateofBirth}"/>
+                               <Text text="{EmailID}"/>
+                               <Text text="{leaveFrom}"/>
+                               <Text text="{leaveTo}"/>
+                           </cells>
+                        </ColumnListItem>
+                     </items>
+                    </Table>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
